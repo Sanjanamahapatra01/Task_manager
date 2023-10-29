@@ -1,0 +1,65 @@
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    background-image: url("https://monday.com/blog/wp-content/uploads/2020/12/Work2_Light-Purple.jpg");
+}
+header {
+    background-color:white;
+    color: #1e357b;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+header h1 {
+    font-size: 40px;
+}
+
+
+.navbar-buttons {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.navbar-buttons button {
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    background-color: #2c2ced;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+
+}
+
+.navbar-buttons button:hover {
+    background-color:#6f8bdc;
+}
+.navbar-buttons .active:hover{
+    background-color:#0e0ea4;
+    color:white;
+}
+.footer footer{
+    color: #1e357b;
+    text-align: center;
+    padding: 20px 10px;
+    margin:450px;
+}
+
+
+
+
+
+
+
+
+
+

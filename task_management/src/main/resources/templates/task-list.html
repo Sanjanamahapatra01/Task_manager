@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Task List</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css" th:href="@{/style.css}" >
+</head>
+<body>
+<div class="header">
+    <header>
+        <h1>Your Task List</h1>
+    </header>
+</div>
+<div class="navbar-buttons">
+    <a th:href="@{/admin/welcome}"><button>Home</button></a>
+    <button class="active">Tasks</button>
+    <a href="/admin/add" ><button>Add task</button></a>
+    <a href="/logout"><button>Logout</button></a>
+</div>
+<table >
+    <thead>
+    <tr>
+        <th>Description</th>
+        <th>Target Date</th>
+        <th>User Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="task : ${tasks}">
+        <td th:text="${task.description}"></td>
+        <td th:text="${task.targetDate}"></td>
+        <td th:text="${task.userName}"></td>
+        <td>
+            <a th:href="@{'/admin/update/' + ${task.id}}" class="button">Update</a>
+            <a th:href="@{'/admin/delete/' + ${task.id}}" class="button">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="footer">
+    <footer>
+        Copyright&copy;2023 Task Manager; All rights reserved.
+    </footer>
+</div>
+
+</body>
+</html>

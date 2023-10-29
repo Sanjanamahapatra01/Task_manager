@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Task</title>
+    <link rel="stylesheet" type="text/css" href="../static/add-task.css" th:href="@{/add-task.css}">
+</head>
+<body>
+<div class="header">
+    <header>
+        <h1>Add Task</h1>
+    </header>
+</div>
+<form action="/admin/add" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="userName" required="required">
+
+    <label for="targetDate">Target Date:</label>
+    <input type="date" id="targetDate" name="targetDate" required="required">
+
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" required="required">
+
+    <button type="submit" class="button">Add Task</button>
+</form>
+<div class="footer">
+    <footer>
+        Copyright&copy;2023 Task Manager; All rights reserved.
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Welcome to Task Manager</title>
+  <link rel="stylesheet" href="../static/welcome12.css" th:href="@{/welcome12.css}" type="text/css">
+</head>
+<body>
+<div class="header">
+  <header>
+    <h1>Your Task Manager</h1>
+  </header>
+</div>
+<div class="navbar-buttons">
+  <button class="active">Home</button>
+  <a th:href="@{/admin/all}"><button>Tasks</button></a>
+</div>
+<div class="footer">
+  <footer>
+   Copyright &copy;2023 Task Manager, All rights reserved.
+  </footer>
+</div>
+</body>
+</html>

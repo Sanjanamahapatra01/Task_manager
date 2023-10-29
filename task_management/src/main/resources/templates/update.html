@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Update Task</title>
+    <link rel="stylesheet" type="text/css" href="../static/update.css" th:href="@{/update.css}">
+</head>
+<body>
+<header>
+    <h1>Update Your Task</h1>
+</header>
+
+<div class="update-container">
+    <form action="/admin/update/{id}" method="post" th:object="${task}">
+        <input type="hidden" th:field="*{id}"/>
+        <label for=" ">User Name:</label>
+        <input type="text" th:field="*{userName}" readonly>
+
+        <label for="">Description:</label>
+        <input type="text" th:field="*{description}" required="required">
+
+        <label for="">Target Date:</label>
+        <input type="date" th:field="*{targetDate}" required="required">
+
+        <button type="submit" class="button">Update Task</button>
+
+    </form>
+
+</div>
+<div class="footer">
+    <footer>
+        Copyright&copy;2023 Task Manager; All rights reserved.
+    </footer>
+</div>
+</body>
+</html>
